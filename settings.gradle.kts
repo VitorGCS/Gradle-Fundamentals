@@ -20,7 +20,7 @@ dependencyResolutionManagement {
     includeBuild("../my-other-project")*/
 }
 
-rootProject.name = "Specify a project-name"
+rootProject.name = "My Gradle project"
 
 include("app")
 include("business-logic")
