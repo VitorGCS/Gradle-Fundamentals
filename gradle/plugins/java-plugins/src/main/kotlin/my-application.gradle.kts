@@ -7,3 +7,13 @@ plugins {
 //java {
 //    toolchain.languageVersion.set(JavaLanguageVersion.of(11))
 //}
+
+tasks.register<Zip>("bundle"){
+    group = "My Group"
+    description = "package it all"
+
+    from(tasks.jar)
+    from(configurations.runtimeClasspath)
+
+    destinationDirectory.set(layout.buildDirectory.dir("distribution"))
+}
